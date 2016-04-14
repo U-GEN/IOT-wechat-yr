@@ -2,8 +2,8 @@
  * Created by CJLIU on 2015/10/16.
  */
 
-var appId = '7c6817eb-9ceb-4f5e-b150-8cb3dcb0e322';
-var appKey = 'a45745e2a1f3e8c691a3b74589bd1997';
+var appId = '054a6a8a-e20d-43b1-8483-4ca28c1eaca6';
+var appKey = '46b2d44a5540a492f8803a649e0375e9';
 var devAccessToken = '541b01ef-22ed-493f-9f7b-0d4446f19f4c';
 // 测试环境
 // var appId = '97256c69-6723-43fb-87dc-167eaf9dc501';
