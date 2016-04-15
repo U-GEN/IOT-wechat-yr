@@ -412,16 +412,16 @@ $(document).ready(function() {
             // 得到小时与分钟 lt[0]--小时；lt[1]--分钟
             var lt = formatHoursMinutes(info.LT);
             // 填充小时 和分钟
-            $('[data-i18n="LT"]').next().text(lt[0]);
-            $('[data-i18n="HOUR"]').next().text(lt[1]);
+            $('#lt [data-i18n="LT"]').next().text(lt[0]);
+            $('#lt [data-i18n="HOUR"]').next().text(lt[1]);
             if (lt[0] == 0) { // 判断 如果小时=0的情况下
                 // 小时不显示
-                $('[data-i18n="HOUR"]').hide();
-                $('[data-i18n="LT"]').next().hide();
+                $('#lt [data-i18n="HOUR"]').hide();
+                $('#lt [data-i18n="LT"]').next().hide();
             } else if (lt[1] == 0) { //判断 如果分钟=0的情况下
                 //分钟不显示
-                $('[data-i18n="MINIUTE"]').hide();
-                $('[data-i18n="HOUR"]').next().hide();
+                $('#lt [data-i18n="MINIUTE"]').hide();
+                $('#lt [data-i18n="HOUR"]').next().hide();
             }
             // $("#lt").text("剩余运行时间：" + lt);
         }
