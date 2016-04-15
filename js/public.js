@@ -581,6 +581,11 @@ function modalInitializationOne(confirmTxt) {
 }
 
 function language(path){
+	var lanList = ["en-us","ko-kr","zh-cn"];
+	var lan = navigator.language.toLowerCase();
+	if(_.indexOf(lanList,lan)== -1){
+		lan = "en-us";
+	}
     i18n.init({resGetPath:path+navigator.language.toLowerCase() +'.json',lowerCaseLng:true},function(t) {  
         $("body").i18n();
     });   
