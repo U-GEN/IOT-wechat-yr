@@ -30,6 +30,7 @@
 	"PSW_ERR":"Password error",
 	"INPUT_FAIL":"Input failed 3 times, will return to the list page",
 	"OK_SEND":"Press 'OK' to send",
+	"VISITORMODE":"Visitor mode",
 
 
 

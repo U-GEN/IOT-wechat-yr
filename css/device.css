@@ -559,10 +559,10 @@ a:hover {
 }
 .role div {
   position: relative;
-  top: 110px;
+  top: 155px;
   float: right;
   color: #ffffff;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 /* 优质睡眠modal */
 .modal-finesleep .modal-dialog {
@@ -810,6 +810,9 @@ a:hover {
 .panel-group .panel ul li p {
   padding-right: 0;
 }
+.panel-group .panel ul li p span {
+  margin-right: 1px;
+}
 .panel-group .panel + .panel {
   margin-top: 0;
 }
@@ -897,16 +900,16 @@ a:hover {
   top: 29px;
 }
 .selectTimeBox .selectTime p:nth-of-type(1) {
-  left: 80px;
+  left: 73px;
 }
 .selectTimeBox .selectTime p:nth-of-type(2) {
-  right: 22px;
+  right: 28px;
 }
 .modal-finalTime .modal-body p {
   font-size: 13px;
   position: absolute;
   top: 29px;
-  left: 155px;
+  left: 152px;
 }
 #select_hour_one_dummy,
 #select_minute_one_dummy,
