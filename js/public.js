@@ -538,6 +538,19 @@ function formatMinutes(value) {
     return result;
 }
 
+/**
+ * 格式化分钟至 x小时x分钟
+ * @param value
+ * @returns []
+ */
+function formatHoursMinutes(value) {
+    var minutes = parseInt(value);
+    var result = "";
+    var hours = parseInt(minutes / 60);
+    minutes = parseInt(minutes % 60);
+    return [hours, minutes];
+}
+
 function getRandomStr(len) {
     var text = "";
     var possible = "0123456789";

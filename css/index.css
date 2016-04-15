@@ -282,6 +282,12 @@ a:hover {
   right: 15%;
   font-weight: bold;
 }
+.alert .rowRightCont li.rightPosition span:nth-child(1) {
+  display: block;
+}
+.alert .rowRightCont li.rightPosition span:nth-child(2) {
+  display: none;
+}
 .alert .rowRightCont:after {
   content: '';
   position: absolute;
@@ -296,6 +302,12 @@ a:hover {
 }
 .row-online-state {
   color: #e0006b;
+}
+.row-online-state .rowRightCont li.rightPosition span:nth-child(1) {
+  display: none;
+}
+.row-online-state .rowRightCont li.rightPosition span:nth-child(2) {
+  display: block;
 }
 .row-online-state .rowRightCont:after {
   background-position: -32px -1px;
@@ -396,7 +408,7 @@ a:hover {
   transition-property: background-color, border;
   -webkit-transition-property: background-color, border;
   float: right;
-  top: -6px;
+  top: -31px;
 }
 .switch:before {
   content: '';
@@ -439,7 +451,10 @@ a:hover {
   -webkit-box-shadow: 0 0 0 4px #e0006b, 2px 1px 6px 4px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin: -60px 0 0 -150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   display: none;
 }

@@ -32,15 +32,14 @@
     <script type="text/javascript" src="js/device.js?version=0.1.3"></script>
 </head>
 <body ontouchstart="">
-
 <div class="topDeviceStateCont">
     <ul class="list-unstyled deviceTemperature">
         <li class="col-xs-6">
-            <p data-i18n="CT">当前设置</p>
+            <p data-i18n="CT">Current</p>
             <p id="ct">36</p>
         </li>
         <li class="col-xs-6">
-            <p data-i18n="ST">设置温度</p>
+            <p data-i18n="ST">Setting</p>
             <p>
                 <span class="tmpSubtract" id="tmpLeft"></span>
                 <span id="st"></span>
@@ -49,14 +48,21 @@
         </li>
     </ul>
     <ul class="list-unstyled deviceTimeState">
-        <li id="lt" ><span data-i18n="LT">剩余运行时间</span>：<span>11</span><span data-i18n="HOUR">小时</span><span>59</span><span data-i18n="MINIUTE">分</span></li>
-        <li id="err">无故障</li>
+        <li id="lt" ><span data-i18n="LT">Time left</span>：<span>11</span><span data-i18n="HOUR">h</span><span>59</span><span data-i18n="MINIUTE">m</span></li>
+        <li id="err">
+            <span data-i18n="ERR_0" style="display: none">No fault</span>
+            <span data-i18n="ERR_1" style="display: none">! Pump or valve failure</span>
+            <span data-i18n="ERR_2" style="display: none">! Temperature sensor A fault</span>
+            <span data-i18n="ERR_3" style="display: none">! Low water level</span>
+            <span data-i18n="ERR_4" style="display: none">! Temperature sensor B fault</span>
+            <span data-i18n="ERR_5" style="display: none">! Automatic protection of heating pipe</span>
+            <span data-i18n="ERR_6" style="display: none">! WiFi does not match</span>
+            <span data-i18n="ERR_7" style="display: none">! Device offline</span>
+
+        </li>
+
     </ul>
-    <p class="languageSwitch">
-        中文
-        <input type="checkbox" id="languageSwitch">
-        한국어
-    </p>
+    <div class="mask"></div>
 </div>
 
 <div class="deviceControlCont">
@@ -67,19 +73,19 @@
         <ul class="list-unstyled switchGroup">
             <li>
                 <p class="onOff_antifreeze"></p>
-                <p>防冻</p>
+                <p data-i18n="FM">Antifreeze</p>
             </li>
             <li>
                 <p class="onOff_time"></p>
-                <p>定时</p>
+                <p  data-i18n="FT">Timer</p>
             </li>
             <li>
                 <p class="onOff_sleep"></p>
-                <p>睡眠</p>
+                <p data-i18n="SM">Sleep</p>
             </li>
             <li>
                 <p class="onOff_finesleep"></p>
-                <p>优睡</p>
+                <p data-i18n="ES">Quality Sleep</p>
             </li>
         </ul>
     </div>
@@ -93,14 +99,14 @@
     <div class="modal-dialog">        
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">输入设备密码</h4>
+                <h4 class="modal-title" data-i18n="SETPSW">Set Device Password</h4>
             </div>
             <div class="modal-body">
                 <input type="text" class="form-control" id="modifyContent" placeholder="分享页面提示的设备密码">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-dismiss="modal" id="pwdCancel">取消</button>
-                <button type="button" class="btn btn-confirm" id="confirm">确认</button>
+                <button type="button" class="btn btn-cancel" data-dismiss="modal" id="pwdCancel" data-i18n="CANCEL">NO</button>
+                <button type="button" class="btn btn-confirm" id="confirm" data-i18n="CONFIRM">YES</button>
             </div>
         </div>
     </div>
@@ -113,8 +119,8 @@
         <div class="modal-content">
             <p id="confirmTxt" class="text-center modal-header"></p>
             <p class="btn-group btn-group-justified">
-                <a id="cancelButton" href="#" class="btn btn-lg" role="button" data-dismiss="modal">取消</a> 
-                <a id="confirmButton" href="#" class="btn btn-lg" role="button">确定</a>
+                <a id="cancelButton" href="#" class="btn btn-lg" role="button" data-dismiss="modal" data-i18n="CANCEL">NO</a> 
+                <a id="confirmButton" href="#" class="btn btn-lg" role="button" data-i18n="CONFIRM">YES</a>
             </p>
         </div>
     </div>
@@ -132,30 +138,31 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">定时关机</h4>
+                <h4 class="modal-title" data-i18n="TIMEOFF">Off Timer</h4>
             </div>
             <div class="modal-body">
                 <!-- 设定1 -->
                 <select id="finalTime">
-                    <option>0小时</option>
-                    <option>1小时</option>
-                    <option>2小时</option>
-                    <option>3小时</option>
-                    <option>4小时</option>
-                    <option>5小时</option>
-                    <option>6小时</option>
-                    <option>7小时</option>
-                    <option>8小时</option>
-                    <option>9小时</option>
-                    <option>10小时</option>
-                    <option>11小时</option>
-                    <option>12小时</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
                 </select>  
+                <p data-i18n="HOUR">h</p>
                 <!-- /设定1 -->
             </div>
             <p id="confirmFooter" class="modal-footer">
-                <button id="finalTimeButton" type="button" class="btn">确定</button>
-                <button type="button" class="btn" data-dismiss="modal">取消</button>
+                <button id="finalTimeButton" type="button" class="btn" data-i18n="CONFIRM">YES</button>
+                <button type="button" class="btn" data-dismiss="modal" data-i18n="CANCEL">NO</button>
             </p> 
         </div>
     </div>
@@ -170,7 +177,8 @@
                 <div id="scroller">
                     <div class="modal-header">
                         <input class="switch" type="checkbox" checked>
-                        <h4 class="modal-title">优质睡眠<small></small></h4>
+                        <h4 class="modal-title" data-i18n="ES">Quality Sleep</h4>
+                        <p id="stateTitle" data-i18n="OK_SEND">Press 'OK' to send</p>
                     </div>
                     <div class="panel-group" id="accordion">
                         <!-- 设定1 -->
@@ -178,8 +186,8 @@
                             <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion" class="collapsed">
                                 <ul class="list-unstyled">
                                     <li class="col-xs-10">
-                                        <p id="timeFirst" class="col-xs-7"><span></span>小时<span></span>分后</p>
-                                        <p id="temperatureFirst" class="col-xs-5">温度：<span></span>℃</p>
+                                        <p id="timeFirst" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="temperatureFirst" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
                                         <!-- <p class="col-xs-7">0小时30分后</p>
                                         <p class="col-xs-5">温度：22℃</p> -->
                                     </li>
@@ -191,13 +199,13 @@
                             <div id="collapseOne" class="collapse">
                                 <div class="panel-body">
                                     <div class="tmpSliderBox">
-                                        <p>温度</p>
+                                        <p data-i18n="TEMP">temperature</p>
                                         <div class="tmpSlider">
                                             <input id="sliderOne" type="text"/>
                                         </div>
                                     </div>
                                     <div class="selectTimeBox">
-                                        <p>时间</p>
+                                        <p data-i18n="TIME">time</p>
                                         <div class="selectTime">
                                             <select id="select_hour_one">
                                                 <option>00</option>
@@ -275,8 +283,8 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p>时</p>
-                                            <p>分</p>
+                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
                                 </div>
@@ -292,8 +300,8 @@
                                         <p class="col-xs-7">10小时35分后</p>
                                         <p class="col-xs-5">温度：27℃</p> 
                                         -->
-	                                    <p id="timeSecond" class="col-xs-7"><span></span>小时<span></span>分后</p>
-	                                    <p id="temperatureSecond" class="col-xs-5">温度：<span></span>℃</p>
+                                        <p id="timeSecond" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="temperatureSecond" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
                                     </li>
                                     <li class="col-xs-2">
                                         <span></span>
@@ -303,13 +311,13 @@
                             <div id="collapseTwo" class="collapse">
                                 <div class="panel-body">
                                     <div class="tmpSliderBox">
-                                        <p>温度</p>
+                                        <p data-i18n="TEMP">temperature</p>
                                         <div class="tmpSlider">
                                             <input id="sliderTwo" type="text"/>
                                         </div>
                                     </div>
                                     <div class="selectTimeBox">
-                                        <p>时间</p>
+                                        <p data-i18n="TIME">time</p>
                                         <div class="selectTime">
                                             <select id="select_hour_two">
                                                 <option>00</option>
@@ -387,8 +395,8 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p>时</p>
-                                            <p>分</p>
+                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
                                 </div>
@@ -400,8 +408,8 @@
                             <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion" class="collapsed">
                                 <ul class="list-unstyled">
                                     <li class="col-xs-10">
-	                                    <p id="timeThird" class="col-xs-7"><span></span>小时<span></span>分后</p>
-	                                    <p id="temperatureThird" class="col-xs-5">温度：<span></span>℃</p>
+                                        <p id="timeThird" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="temperatureThird" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
 										<!--
 										<p class="col-xs-7">2小时3分后</p>
                                         <p class="col-xs-5">温度：26℃</p>
@@ -415,13 +423,13 @@
                             <div id="collapseThree" class="collapse">
                                 <div class="panel-body">
                                     <div class="tmpSliderBox">
-                                        <p>温度</p>
+                                        <p data-i18n="TEMP">temperature</p>
                                         <div class="tmpSlider">
                                             <input id="sliderThree" type="text"/>
                                         </div>
                                     </div>
                                     <div class="selectTimeBox">
-                                        <p>时间</p>
+                                        <p data-i18n="TIME">time</p>
                                         <div class="selectTime">
                                             <select id="select_hour_three">
                                                 <option>00</option>
@@ -499,8 +507,8 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p>时</p>
-                                            <p>分</p>
+                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
                                 </div>
@@ -509,8 +517,8 @@
                         <!-- /设定3 -->
                     </div> 
                     <p class="modal-footer">
-                        <button id="outBtn" type="button" class="btn">确定</button>
-                        <button type="button" class="btn" data-dismiss="modal">取消</button>
+                        <button id="outBtn" type="button" class="btn" data-i18n="CONFIRM">YES</button>
+                        <button type="button" class="btn" data-dismiss="modal" data-i18n="CANCEL">NO</button>
                     </p>
                 </div>
             </div>

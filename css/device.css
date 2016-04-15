@@ -240,7 +240,7 @@ a:hover {
   color: #ffffff;
   background: linear-gradient(top, #8a0016, #ff2e8f);
   background: -webkit-linear-gradient(top, #8a0016, #ff2e8f);
-  padding-top: 5px;
+  padding-top: 6px;
   position: relative;
 }
 .deviceTemperature {
@@ -252,10 +252,11 @@ a:hover {
   font-size: 30px;
   padding: 0;
 }
-.deviceTemperature li p:last-child {
+.deviceTemperature li p:nth-child(2) {
   font-size: 75px;
   font-family: Arial;
   position: relative;
+  height: 110px;
 }
 .deviceTemperature li .tmpSubtract {
   width: 0;
@@ -356,8 +357,8 @@ a:hover {
   background: -webkit-linear-gradient(top, #320273, #aa7ded);
 }
 .offline_state {
-  background: linear-gradient(top, #320273, #aa7ded);
-  background: -webkit-linear-gradient(top, #320273, #aa7ded);
+  background: linear-gradient(top, #666666, #999999);
+  background: -webkit-linear-gradient(top, #666666, #999999);
 }
 .deviceControlCont {
   width: 100%;
@@ -582,14 +583,17 @@ a:hover {
   -webkit-border-bottom-right-radius: 0;
 }
 .modal-finesleep .modal-dialog .modal-content .modal-header {
-  padding: 25px 25px 15px;
+  padding: 25px;
   border-bottom: 0;
   color: #e0006b;
-}
-.modal-finesleep .modal-dialog .modal-content .modal-header small {
   position: relative;
-  top: -2px;
-  left: 12px;
+}
+.modal-finesleep .modal-dialog .modal-content .modal-header p {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  display: none;
+  font-size: 12px;
 }
 .modal-finesleep .modal-dialog .modal-content .modal-footer {
   border-top: 0;
@@ -617,7 +621,7 @@ a:hover {
   border-color: #e0006b;
 }
 /* /优质睡眠modal */
-/*  预约定时modal */
+/* 预约定时modal */
 .modal-finalTime .modal-dialog {
   height: 230px;
 }
@@ -900,6 +904,12 @@ a:hover {
 }
 .selectTimeBox .selectTime p:nth-of-type(2) {
   right: 22px;
+}
+.modal-finalTime .modal-body p {
+  font-size: 13px;
+  position: absolute;
+  top: 29px;
+  left: 155px;
 }
 #select_hour_one_dummy,
 #select_minute_one_dummy,
