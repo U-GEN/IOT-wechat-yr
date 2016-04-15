@@ -2,10 +2,10 @@
  * Created by CJLIU on 2015/9/19.
  */
 $(document).ready(function () {
-    
-    i18n.init({resGetPath:'lang/'+navigator.language+'.json',lowerCaseLng:true},function(t) {  
-        $("body").i18n();
-    });
+    language('lang/');
+    // i18n.init({resGetPath:'lang/'+navigator.language+'.json',lowerCaseLng:true},function(t) {  
+    //     $("body").i18n();
+    // });
     // 测试环境注释
     $(".loading").show();
     //当前设备ID
@@ -287,7 +287,7 @@ $(document).ready(function () {
                 'Authorization': 'token ' + devAccessToken
             };
             var ticket = getDeviceQrcode(_requestHeader, thisDeviceId);
-            //alert('分享URL: ' + 'http://' + document.domain + '/shareDevice.html?ticket=' + ticket + '&pwd=' + password);
+            alert('分享URL: ' + 'http://' + document.domain + '/shareDevice.html?ticket=' + ticket + '&pwd=' + password);
             var content = {
                 title: '设备分享',
                 desc: desc,

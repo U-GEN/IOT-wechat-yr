@@ -3,9 +3,7 @@
  */
 $(document).ready(function() {
 
-    i18n.init({resGetPath:'lang/'+navigator.language.toLowerCase() +'.json',lowerCaseLng:true},function(t) {  
-        $("body").i18n();
-    });
+    language('lang/');
     // 是否可以hide loading 标记 （条件收到CT 并且微信config 注册成功）
     var wxRes = false;
     //微信jssdk配置 正式需打开
@@ -607,8 +605,10 @@ $(document).ready(function() {
     /* 电源关闭后的蒙版 */
     function mask(power) {
         if (power == 0) {
+            $(".deviceControlCont").addClass('powerSwitch_off_state');
             $(".mask").show();
         } else {
+            $(".deviceControlCont").removeClass('powerSwitch_off_state');
             $(".mask").hide();
         }
     }

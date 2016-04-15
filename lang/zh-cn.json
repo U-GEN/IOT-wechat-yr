@@ -50,5 +50,8 @@
 	"DEL_DEVICE":"真的要移除设备吗？",
 	"DEL_DEVICE_SUCCESS":"移除设备成功",
 	"DEL_DEVICE_FAIL":"移除设备失败",
-	"ALREADY_SHARE":"已被分享，快来点击"
+	"ALREADY_SHARE":"已被分享，快来点击",
+	"CLICKHERE":"点击这里",
+	"DEVICESHARE":"可以将设备分享给",
+	"FRIEND":"家人和朋友"
 }

@@ -323,13 +323,13 @@ a:hover {
 .rowRightCont .btn-group-justified .btn-group {
   color: #333333;
   font-size: 12px;
+  text-align: center;
 }
 .rowRightCont .btn-group-justified .btn-group p {
   margin-bottom: 0;
 }
 .rowRightCont .btn-group-justified .btn-group p .iconfont {
   font-size: 20px;
-  margin-left: 2px;
 }
 .rowRightCont .btn-group-justified .btn-group p span {
   display: block;
@@ -381,10 +381,21 @@ a:hover {
 }
 /* /权限modal */
 /* shareModal */
-.modal-share {
-  background: url("../img/share.png") no-repeat 80% 15px;
-  background-size: 210px 185px;
-  -webkit-background-size: 210px 185px;
+.modal-share .modal-dialog {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.modal-share .modal-dialog .modal-content {
+  background: url("../img/shareArrow.png") no-repeat;
+  background-size: 30% auto;
+  -webkit-background-size: 30% auto;
+  background-position: 92% 12%;
+  padding-top: 28%;
+  color: #ffffff;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 /* /shareModal */
 .switch {

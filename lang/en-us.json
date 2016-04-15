@@ -50,5 +50,8 @@
 	"DEL_DEVICE":"Do you really want to remove the device?",
 	"DEL_DEVICE_SUCCESS":"Remove device success",
 	"DEL_DEVICE_FAIL":"Remove device failed",
-	"ALREADY_SHARE":"Have been shared, come on tap"
+	"ALREADY_SHARE":"Have been shared, come on tap",
+	"CLICKHERE":"click here",
+	"DEVICESHARE":"device can be shared to",
+	"FRIEND":"Family and friends"
 }

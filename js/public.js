@@ -563,6 +563,7 @@ function getRandomStr(len) {
 /* 弹出框双选择初始化*/
 function modalInitializationTwo(confirmTxt) {
     $("#confirmTxt").html(confirmTxt);
+    language('../lang/');    
     $("#cancelButton").show();
     $("#confirmButton").off();//移除所有绑定事件
     $("#confirmModal").modal('show');
@@ -570,10 +571,17 @@ function modalInitializationTwo(confirmTxt) {
 /* 弹出框单选择初始化*/
 function modalInitializationOne(confirmTxt) {
     $("#confirmTxt").html(confirmTxt);
+    language('../lang/');
     $("#cancelButton").hide();
     $("#confirmButton").off();//移除所有绑定事件
     $("#confirmModal").modal('show');
     $("#confirmButton").on('click', function () {
         $("#confirmModal").modal('hide');
     });
+}
+
+function language(path){
+    i18n.init({resGetPath:path+navigator.language.toLowerCase() +'.json',lowerCaseLng:true},function(t) {  
+        $("body").i18n();
+    });   
 }
