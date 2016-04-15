@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
 
-    i18n.init({resGetPath:'js/'+navigator.language+'.js',lowerCaseLng:true},function(t) {  
+    i18n.init({resGetPath:'lang/'+navigator.language.toLowerCase() +'.json',lowerCaseLng:true},function(t) {  
         $("body").i18n();
     });
     // 是否可以hide loading 标记 （条件收到CT 并且微信config 注册成功）
