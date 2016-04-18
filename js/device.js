@@ -28,9 +28,9 @@ $(document).ready(function() {
                     wxRes = true;
                 }
                 var content = {
-                    title: '泰和美商城',
+                    title: '伊日商城',
                     desc: '去商城逛逛吧',
-                    link: 'http://wap.koudaitong.com/v2/showcase/homepage?alias=9c8qy9px',
+                    link: 'https://shop16863393.koudaitong.com/v2/showcase/homepage?kdt_id=16671225',
                     imgUrl: 'http://' + document.domain + '/img/webshare.jpg'
                 }
                 shareAppMessage(content);

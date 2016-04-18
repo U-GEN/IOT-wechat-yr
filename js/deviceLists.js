@@ -41,9 +41,9 @@ $(document).ready(function () {
           success: function (res) {
               $(".loading").hide();
               var content = {
-                  title: '泰和美商城',
+                  title: '伊日商城',
                   desc: '去商城逛逛吧',
-                  link: 'http://wap.koudaitong.com/v2/showcase/homepage?alias=9c8qy9px',
+                  link: 'https://shop16863393.koudaitong.com/v2/showcase/homepage?kdt_id=16671225',
                   imgUrl: 'http://' + document.domain + '/img/webshare.jpg'
               }
               shareAppMessage(content);
@@ -82,7 +82,7 @@ $(document).ready(function () {
                 var device_id = _data.id;
                 var product_id = device_id.split('/')[0];
                 var bssid = _data.bssid;
-                var alias = !!_data.alias ? _data.alias : "TH-1507";
+                var alias = !!_data.alias ? _data.alias : "TY-1688";
                 var wxDevice_id = _data.wx_device_id;
                 var url = product_id+'.html?device_id=' + device_id + '&access_token=' + access_token + '&wx_device_id=' + wxDevice_id + '&alias=' + alias;
                 var state = _data.online;
@@ -122,7 +122,7 @@ $(document).ready(function () {
                 var device_id = _data.id;
                 var product_id = device_id.split('/')[0];
                 var bssid = _data.bssid;
-                var alias = !!_data.alias ? _data.alias : "TH-1507";
+                var alias = !!_data.alias ? _data.alias : "TY-1688";
                 var wxDevice_id = _data.wx_device_id;
                 var url = product_id+'.html?device_id=' + device_id + '&access_token=' + access_token + '&wx_device_id=' + wxDevice_id + '&alias=' + alias;
                 var state = _data.online;
@@ -272,8 +272,8 @@ $(document).ready(function () {
             thisDeviceId = $(this).parents('.alert')[0].id;
             var name = $(this).parents('.alert').find("#alias").text();
             var MAC = $(this).parents('.alert').find("#bssid").text();
-            var desc = "(" + name + "/" + MAC + ")" + "<span data-i18n='ALREADY_SHARE'>Have been shared, come on tap</span>";
-
+            // var desc = "(" + name + "/" + MAC + ")" + "<span data-i18n='ALREADY_SHARE'>Have been shared, come on tap</span>";
+            var desc = "(" + name + "/" + MAC + ")" + "已被分享，快来点击";
             // 获取设备密码
             var password = getDeviceProperties(requestHeader, thisDeviceId, 'password');
             // 如果没有设备密码，创建
@@ -287,7 +287,7 @@ $(document).ready(function () {
                 'Authorization': 'token ' + devAccessToken
             };
             var ticket = getDeviceQrcode(_requestHeader, thisDeviceId);
-            // alert('分享URL: ' + 'http://' + document.domain + '/shareDevice.html?ticket=' + ticket + '&pwd=' + password);
+            //alert('分享URL: ' + 'http://' + document.domain + '/shareDevice.html?ticket=' + ticket + '&pwd=' + password);
             var content = {
                 title: '设备分享',
                 desc: desc,
@@ -304,9 +304,9 @@ $(document).ready(function () {
             };
             shareAppMessage(content, showGuide, hideGuide);
             var content = {
-                title: '泰和美商城',
+                title: '伊日商城',
                 desc: '去商城逛逛吧',
-                link: 'http://wap.koudaitong.com/v2/showcase/homepage?alias=9c8qy9px',
+                link: 'https://shop16863393.koudaitong.com/v2/showcase/homepage?kdt_id=16671225',
                 imgUrl: 'http://' + document.domain + '/img/webshare.jpg'
             };
             shareTimeline(content, hideGuide);
