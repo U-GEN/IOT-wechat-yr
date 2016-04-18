@@ -583,6 +583,7 @@ function modalInitializationOne(confirmTxt) {
 function language(path){
 	var lanList = ["en-us","ko-kr","zh-cn"];
 	var lan = navigator.language.toLowerCase();
+	alert(lan);
 	if(_.indexOf(lanList,lan)== -1){
 		lan = "en-us";
 	}
