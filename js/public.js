@@ -582,15 +582,13 @@ function modalInitializationOne(confirmTxt) {
 function language(path) {
     var lanList = ["en-us", "ko-kr", "zh-cn"];
     var lan = navigator.language.toLowerCase();
+    var language = "en-us";
     _.each(lanList, function(_item, i) {
         if (_item.split("-")[0] == lan.split("-")[0]) {
-            lan = "en-us";
-        } else {
-            lan = lanList[i];
+            language = _item;
         }
     });
-    // alert(lan);
-    i18n.init({ resGetPath: path + lan + '.json', lowerCaseLng: true }, function(t) {
+    i18n.init({ resGetPath: path + language + '.json', lowerCaseLng: true }, function(t) {
         $("body").i18n();
     });
 }
