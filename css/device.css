@@ -253,17 +253,24 @@ a:hover {
   padding: 0;
 }
 .deviceTemperature li p:nth-child(2) {
-  font-size: 75px;
-  font-family: Arial;
   position: relative;
   height: 110px;
+  font-size: 15px;
+}
+.deviceTemperature li p:nth-child(2) span:nth-child(1) {
+  font-size: 72px;
+  font-family: Arial;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: bottom;
 }
 .deviceTemperature li .tmpSubtract {
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-right: 22px solid;
-  border-bottom: 12px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 20px solid;
+  border-bottom: 10px solid transparent;
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -274,9 +281,9 @@ a:hover {
 .deviceTemperature li .tmpAdd {
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-left: 22px solid;
-  border-bottom: 12px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 20px solid;
+  border-bottom: 10px solid transparent;
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -537,7 +544,7 @@ a:hover {
 }
 /* 电源关闭蒙版 */
 .mask {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -809,9 +816,6 @@ a:hover {
 }
 .panel-group .panel ul li p {
   padding-right: 0;
-}
-.panel-group .panel ul li p span {
-  margin-right: 1px;
 }
 .panel-group .panel + .panel {
   margin-top: 0;

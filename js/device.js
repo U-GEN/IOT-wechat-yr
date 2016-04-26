@@ -367,7 +367,7 @@ $(document).ready(function() {
         if (_.has(info, "ST")) {
             console.log(info.ST);
             var intST = parseInt(info.ST);
-            if (count && intST <= 60 && intST >= 10) {
+            if (count && intST <= 65 && intST >= 10) {
                 setTemperature = intST;
                 temperature.text(setTemperature);
             } else {}
@@ -387,7 +387,8 @@ $(document).ready(function() {
                 intCT = "--";
             }
             $("#ct").empty().children().remove();
-            $("#ct").append('<span>' + intCT + '</span>');
+            // $("#ct").append('<span>' + intCT + '</span>℃');
+            $("#ct").text(intCT);
             currentTemperature = intCT;
         }
         //睡眠模式
@@ -483,10 +484,10 @@ $(document).ready(function() {
     /* 设置温度增加 ，如果大于60则返回*/
     function setTmpRight() {
         $("#tmpRight").on("touchstart", function() {
-            if (setTemperature >= 60) { //温度大于60度则返回无法继续点击
+            if (setTemperature >= 65) { //温度大于60度则返回无法继续点击
                 return;
             } else {
-                if (setTemperature == 59) {
+                if (setTemperature == 64) {
                     $(".tmpAdd").hide();
                 }
                 $(".tmpSubtract").show();
@@ -615,7 +616,7 @@ $(document).ready(function() {
 
     /* 判断温度值来隐藏调控按钮及温度色条变灰 */
     function temperatureChange() {
-        if (setTemperature == 60) {
+        if (setTemperature == 65) {
             $(".tmpAdd").hide();
         } else if (setTemperature == 10) {
             $(".tmpSubtract").hide();
@@ -762,7 +763,7 @@ $(document).ready(function() {
     function selectSleepTemperature(sele, seleSpan) {
         sele.slider({
             min: 10,
-            max: 60,
+            max: 65,
             value: parseInt(seleSpan.text()),
             tooltip: 'always'
         }).on("change", function(slideEvt) {

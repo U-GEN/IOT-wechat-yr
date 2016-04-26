@@ -1,9 +1,9 @@
 {
-	"CT":"Water TEMP",
-	"ST":"Setting",
+	"CT":"TEMP",
+	"ST":"SETTING",
 	"LT":"The remaining off time",
-	"HOUR":"h",
-	"MINIUTE":"min",
+	"HOUR":" h ",
+	"MINIUTE":" min ",
 	"FT":"Timer",
 	"FM":"Antifreeze",
 	"ES":"Quality Sleep",

@@ -35,20 +35,22 @@
 <div class="topDeviceStateCont">
     <ul class="list-unstyled deviceTemperature">
         <li class="col-xs-6">
-            <p data-i18n="CT"></p>
-            <p id="ct">36</p>
+            <p data-i18n="CT">TEMP</p>
+            <p>
+                <span id="ct"></span>℃
+            </p>
         </li>
         <li class="col-xs-6">
-            <p data-i18n="ST"></p>
+            <p data-i18n="ST">SETTING</p>
             <p>
+                <span id="st"></span>℃
                 <span class="tmpSubtract" id="tmpLeft"></span>
-                <span id="st"></span>
                 <span class="tmpAdd" id="tmpRight"></span>
             </p>
         </li>
     </ul>
     <ul class="list-unstyled deviceTimeState">
-        <li id="lt" ><span data-i18n="LT">Time left</span>：<span>11</span><span data-i18n="HOUR">h</span><span>59</span><span data-i18n="MINIUTE">m</span></li>
+        <li id="lt" ><span data-i18n="LT">Time left</span>：<span>11</span><span data-i18n="HOUR"> h </span><span>59</span><span data-i18n="MINIUTE"> m </span></li>
         <li id="err">
             <span data-i18n="ERR_0" style="display: none">No fault</span>
             <span data-i18n="ERR_1" style="display: none">! Pump or valve failure</span>
@@ -62,7 +64,6 @@
         </li>
 
     </ul>
-    <div class="mask"></div>
 </div>
 
 <div class="deviceControlCont">
@@ -89,10 +90,11 @@
             </li>
         </ul>
     </div>
-    <!-- 电源关闭蒙版 -->
-    <div class="mask"></div>
-    <!-- /电源关闭蒙版 -->
 </div>
+
+<!-- 电源关闭蒙版 -->
+<div class="mask"></div>
+<!-- /电源关闭蒙版 -->
 
 <!--输入密码modal-->
 <div class="modal modal-modifyName fade" id="inputPassWordModal" data-backdrop="static">
@@ -157,7 +159,7 @@
                     <option>11</option>
                     <option>12</option>
                 </select>  
-                <p data-i18n="HOUR">h</p>
+                <p data-i18n="HOUR"> h </p>
                 <!-- /设定1 -->
             </div>
             <p id="confirmFooter" class="modal-footer">
@@ -186,7 +188,7 @@
                             <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion" class="collapsed">
                                 <ul class="list-unstyled">
                                     <li class="col-xs-10">
-                                        <p id="timeFirst" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="timeFirst" class="col-xs-7"><span></span><span data-i18n="HOUR"> h </span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
                                         <p id="temperatureFirst" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
                                         <!-- <p class="col-xs-7">0小时30分后</p>
                                         <p class="col-xs-5">温度：22℃</p> -->
@@ -283,7 +285,7 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="HOUR"> h </p>
                                             <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
@@ -300,7 +302,7 @@
                                         <p class="col-xs-7">10小时35分后</p>
                                         <p class="col-xs-5">温度：27℃</p> 
                                         -->
-                                        <p id="timeSecond" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="timeSecond" class="col-xs-7"><span></span><span data-i18n="HOUR"> h </span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
                                         <p id="temperatureSecond" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
                                     </li>
                                     <li class="col-xs-2">
@@ -395,7 +397,7 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="HOUR"> h </p>
                                             <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
@@ -408,7 +410,7 @@
                             <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion" class="collapsed">
                                 <ul class="list-unstyled">
                                     <li class="col-xs-10">
-                                        <p id="timeThird" class="col-xs-7"><span></span><span data-i18n="HOUR">h</span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
+                                        <p id="timeThird" class="col-xs-7"><span></span><span data-i18n="HOUR"> h </span><span></span><span data-i18n="MINIUTE">m</span><span data-i18n="AFTER"> after</span></p>
                                         <p id="temperatureThird" class="col-xs-5"><span data-i18n="TEMP">TEMP</span><span></span>℃</p>
 										<!--
 										<p class="col-xs-7">2小时3分后</p>
@@ -507,7 +509,7 @@
                                                 <option>58</option>
                                                 <option>59</option>
                                             </select>
-                                            <p data-i18n="HOUR">h</p>
+                                            <p data-i18n="HOUR"> h </p>
                                             <p data-i18n="MINIUTE">m</p>
                                         </div>
                                     </div>
