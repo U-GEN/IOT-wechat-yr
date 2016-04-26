@@ -851,7 +851,7 @@ a:hover {
   left: 0;
 }
 .slider-track:after {
-  content: "60℃";
+  content: "65℃";
   position: absolute;
   top: 14px;
   right: 0;
