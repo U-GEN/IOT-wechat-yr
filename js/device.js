@@ -246,7 +246,9 @@ $(document).ready(function() {
 
     /* 云端获取设备信息 */
     function getDeviceInfo(device_id, getESInfo) {
-        $("#jumbotron").removeClass('offline_state'); //移除设备状态灰色背景
+        // 2016-6-23 jenny edit 离线再上线时 还是离线的状态
+        // $("#jumbotron").removeClass('offline_state'); //移除设备状态灰色背景
+        $(".topDeviceStateCont").removeClass('offline_state'); //移除设备状态灰色背景
         var deviceInfo = getDeviceProperties(requestHeader, device_id);
         console.log('deviceInfo', deviceInfo);
         var info = {};
